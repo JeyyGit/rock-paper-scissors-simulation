@@ -1,7 +1,6 @@
 import pygame
 import random
 import math
-import time
 
 pygame.init()
 
@@ -40,14 +39,12 @@ class Item:
 		self.draw()
 
 def game():
-	random.seed(0)
 	items = []
 	for _ in range(30):
 		items.append(Item([random.randint(50, 550), random.randint(50, 550)], 10, [0, 0], 'r'))
 		items.append(Item([random.randint(50, 550), random.randint(50, 550)], 10, [0, 0], 'p'))
 		items.append(Item([random.randint(50, 550), random.randint(50, 550)], 10, [0, 0], 's'))
 
-	time.sleep(10)
 	while True:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
@@ -58,7 +55,6 @@ def game():
 		rocks = [item for item in items if item.type == 'r']
 		papers = [item for item in items if item.type == 'p']
 		sciss = [item for item in items if item.type == 's']
-		# print(len(rocks), len(papers), len(sciss))
 
 		for item in items:
 			item.velocity = [random.randint(-1, 1), random.randint(-1, 1)]
