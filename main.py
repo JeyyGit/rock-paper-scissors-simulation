@@ -87,9 +87,8 @@ async def game():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				return
-			elif event.type == pygame.KEYDOWN:
-				if event.key == pygame.K_r:
-					items = init()
+			elif event.type == pygame.MOUSEBUTTONDOWN:
+				items = init()
 
 		screen.fill((255, 255, 255))
 		screen.blit(text_reset, (10, 10))
