@@ -16,7 +16,7 @@ clock = pygame.time.Clock()
 FPS = 30
 
 font = pygame.font.SysFont(None, 30)
-text_reset = font.render('Press R to reset', False, 'black')
+text_reset = font.render('Click to reset', False, 'black')
 
 img_rock = pygame.image.load('emoji_rock.png').convert_alpha()
 img_paper = pygame.image.load('emoji_paper.png').convert_alpha()
